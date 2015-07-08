@@ -69,7 +69,7 @@ window.countNRooksSolutions = function(n) {
   // Cheap way, but it works!
   var num = 1;
   for (var i = 1; i <= n; i++) {
-    num = num * i;  
+    num = num * i;
   }
   // return result;
   //solutionBoard.togglePiece(0,1);
@@ -95,7 +95,7 @@ window.countNRooksSolutions = function(n) {
     }
 
     toggle(x, y);
-    pieceCounter++;  
+    pieceCounter++;
     // Outer Loop: Looping over rows
     for (var i = 0; i < n; i++) {
       // i = row number;
@@ -107,7 +107,7 @@ window.countNRooksSolutions = function(n) {
         // j = column number
         //if (solutionBoard.get(i)[j] !== undefined) {
           //alert('hi')
-          if (i !== x || j !== y) {  
+          if (i !== x || j !== y) {
             toggle(i, j);
             pieceCounter++;
           }
@@ -115,7 +115,7 @@ window.countNRooksSolutions = function(n) {
             toggle(i, j);
             pieceCounter--;
           }
-          if (pieceCounter === n) {  
+          if (pieceCounter === n) {
             solutionCount++;
           }
         //}
@@ -129,7 +129,7 @@ window.countNRooksSolutions = function(n) {
     console.log('Pieces placed: ' + pieceCounter);
     console.log('Solution count: ' + solutionCount);
     console.log(solutionBoard.rows());
-    // NOW: Change where we start and then call loop again.  
+    // NOW: Change where we start and then call loop again.
   };
 
   solutionMaker(0, 0);
@@ -137,8 +137,6 @@ window.countNRooksSolutions = function(n) {
   console.log('Number of solutions for ' + n + ' rooks:', solutionCount);
   return solutionCount;
 };
-
-
 
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n queens placed such that none of them can attack each other
 window.findNQueensSolution = function(n) {
