@@ -126,7 +126,7 @@
 
       var pieceCounter = 0; // Count number of pieces that we find.
 
-      // Loop through the column and determine if we have mulitple pieces.
+      // Loop through the column and determine if we have multiple pieces.
       for (var i = 0; i < numRows; i++) {
         var curRow = this.get(i);
 

@@ -48,11 +48,11 @@ window.countNRooksSolutions = function(n) {
       return;
     }
     for (var i = 0; i < n; i++) {
-      board.togglePiece(row, i);
-      if (!board.hasAnyRooksConflicts()) {
-        findSolution(row + 1);
+      board.togglePiece(row, i); // add piece
+      if (!board.hasAnyRooksConflicts()) { //if no conflicts,
+        findSolution(row + 1); //move on to next row
       }
-      board.togglePiece(row, i);
+      board.togglePiece(row, i); // remove piece
     }
   };
   findSolution(0);
